@@ -1,20 +1,75 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> Skeleton APP II </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-segment [scrollable]="true" value="heart" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="barbell">
+      <ion-icon name="barbell"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="trash">
+      <ion-icon name="trash"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="person">
+      <ion-icon name="person"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Skeleton App II</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button size="small" (click)="crearAbrirBaseDeDatos()">Crear / Abrir Base de Datos</ion-button>
+    <ion-button size="small" (click)="crearTabla()">Crear Tablaa</ion-button>
+    
   </div>
+
+   <div style="max-width: 200px;margin: auto;">
+      <ion-item>
+        <ion-input placeholder="Ingrese Nombre Libro" [(ngModel)]="book_name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input placeholder="Ingrese precio" [(ngModel)]="book_price"></ion-input>
+      </ion-item>
+      <ion-button (click)="insertar()">agregar reg</ion-button>
+   </div>
+
+   <div style="border-top: solid 1px lightgray;margin-top: 20px;">
+      <ion-button (click)="selectData()">listar</ion-button>
+      <ion-button (click)="selectByCodicion()">filtro</ion-button>
+      <ion-button (click)="actualizar()">Actualizarrr</ion-button>
+      <ion-button (click)="eliminar()">Eliminar</ion-button>
+
+      <div *ngFor="let b of bookData;let i=index">
+          <div>book name:{{b.book_name}}</div>
+          <div>book price:{{b.book_price}}</div>
+      </div>  
+   </div>
 </ion-content>

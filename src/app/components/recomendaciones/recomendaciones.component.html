@@ -1,0 +1,20 @@
+<div >
+  <ion-list >
+    <div style="text-align: center;background-color:white;border: solid 2px black;margin-bottom: 20px;">
+      <h1>Recomendaciones del CHEF</h1>
+    </div>
+    <ion-item *ngFor="let item of items" >
+      <div style="display: flex;background-color: rgb(44, 222, 162);border: solid 2px black;">
+        <div style="width: 30%;text-align: center;">
+          <img style="border: solid 2px black;margin-top: 10px;" src="../../../assets/imgs/{{item.imagen}}" width="100px" height="100px" alt="">
+          <b>Disponible: {{item.disponible}}</b>
+        </div>
+        <div style="width: 60%;">
+          <div style="margin-top: 5px;margin-bottom: 5px;"><h3>{{ item.titulo }}</h3></div>
+          <div style="text-align: justify;font-size: small;margin-bottom: 10px;">{{ item.texto }}</div>
+        </div>
+      </div>
+    
+    </ion-item>
+  </ion-list>
+</div>

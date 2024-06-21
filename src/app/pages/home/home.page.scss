@@ -1,0 +1,49 @@
+#container {
+  //text-align: center;
+  //position: absolute;
+  // left: 0;
+  // right: 0;
+  // top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-content{
+  background-image: url('../../../assets/imgs/fondo.jpg');
+  width: 100%;
+  height: 100%; /* 100vh asegura que el div ocupe el 100% de la altura del viewport */
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; 
+}
+
+.full-size-div {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../../../assets/imgs/fondo.jpg');
+  background-size: 100% 100%; /* Ajusta la imagen para cubrir todo el div */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  background-color: lightgray; /* Opcional: color de fondo para visualizar el tamaño */
+}

@@ -1,0 +1,28 @@
+<div style="background-image: url('../../../assets/imgs/fondo_madera.jpg');">
+  <div style="display: grid;grid-template-columns: 1fr 1fr; gap: 10px;">
+    <div style="background-color: rgb(128, 108, 108);padding: 5px;margin: 5px;border-radius: 20px;border: solid 1px black;color: white;">
+      <ion-select (ionChange)="onCategoryChange($event)"  placeholder="Seleccione Categoria" interface="popover" name="cboDato">
+        <ion-select-option value="1">Carnes</ion-select-option>
+        <ion-select-option value="2">Sopas</ion-select-option>
+        <ion-select-option value="3">Tragos y Bebidas</ion-select-option>
+        <ion-select-option value="4">Postres</ion-select-option>
+        <ion-select-option value="5">Pastas</ion-select-option>
+        <ion-select-option value="6">Mariscos</ion-select-option>
+        <ion-select-option value="7">Recomendaciones</ion-select-option>
+        <ion-select-option value="8">Categorias</ion-select-option>
+      </ion-select>
+    </div>
+    <div style="padding: 10px;margin: 5px;">
+      <img src="../../../assets/imgs/user.png" (click)="usuario()" width="30px" height="30px" style="margin: 3px;" alt="">
+      <img src="../../../assets/imgs/car.png" (click)="pedidos()" width="30px" height="30px" style="margin: 3px;" alt="">
+      <img src="../../../assets/imgs/card.png"  width="30px" height="30px" style="margin: 3px;" alt="">
+      <img src="../../../assets/imgs/esp.jpg" width="40px" height="30px" style="margin: 3px;" alt="">
+      <img src="../../../assets/imgs/ing.jpg" width="40px" height="30px" style="margin: 3px;" alt="">
+    </div>
+  </div>
+  <div>
+    <div style="background-color: rgb(128, 108, 108);padding: 5px;margin: 5px;width: 100%;border-radius: 20px;border: solid 1px black;color: white;">
+      <ion-input style="width: 100%;"  labelPlacement="floating" label="Busqueda de Plato" placeholder="Ingrese plato a buscar ... "></ion-input>
+    </div>
+  </div>
+</div>

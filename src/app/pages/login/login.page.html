@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-header></app-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="full-size-div">
+    <div style="display: block;text-align: center;">
+      <div style="margin: 20px;color: white;"><h1>Login de Usuario</h1></div>
+      <div>
+        <img src="../../../assets/imgs/perfil.webp" style="border-radius: 50%; width: 250px;height: 250px;border: solid 2px black;" alt="">
+      </div>
+
+      <div>
+        
+        <div style="background-color: gray;width: 100%;display: flex;margin-top: 15px;">
+          <div style="margin: 10px;">
+            <img src="../../../assets/imgs/user.png" width="50px" height="50px" style="border-radius: 50%;border: solid 2px black;" alt="">
+          </div>
+          <div >
+            <div style="margin-left: 10px;margin-top: 10px;text-align: left;">Usuario</div>
+            <div style="margin-left: 10px;margin-right: 10px;text-align: left;">
+              <ion-input style="width: 100%;"  [(ngModel)]="usuario" placeholder="Ingrese nombre de usuario"></ion-input>
+            </div>
+          </div>
+        </div>
+
+        <div style="background-color: gray;width: 100%;display: flex;margin-top: 15px;">
+          <div style="margin: 10px;">
+            <img src="../../../assets/imgs/user.png" width="50px" height="50px" style="border-radius: 50%;border: solid 2px black;" alt="">
+          </div>
+          <div >
+            <div style="margin-left: 10px;margin-top: 10px;text-align: left;">Password</div>
+            <div style="margin-left: 10px;margin-right: 10px;">
+              <ion-input type="password" [(ngModel)]="password" style="width: 100%;text-align: left;" placeholder="Ingrese contraseña"></ion-input>
+            </div>
+          </div>
+        </div>
+        <div>
+          <ion-button expand="block" (click)="validarUsuario()">Aceptar</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>

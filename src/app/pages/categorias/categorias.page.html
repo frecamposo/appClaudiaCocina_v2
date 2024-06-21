@@ -1,0 +1,14 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <app-header (categoryChange)="onCategoryChanged($event)"></app-header>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div style="background-color: black;color: white;text-align: center;padding: 10px;z-index: 0;">Bienvenido {{usuario}}</div>
+  <div class="full-size-div">
+    <app-catego></app-catego>
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer> 

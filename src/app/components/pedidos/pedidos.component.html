@@ -1,0 +1,24 @@
+<div >
+  <ion-list >
+    <div style="text-align: center;background-color:white;border: solid 2px black;margin-bottom: 20px;">
+      <h1>Listado Pedidos</h1>
+    </div>
+    <ion-item *ngFor="let item of items" >
+      <div style="display: flex;background-color: rgb(44, 222, 162);border: solid 2px black;width: 100%;">
+        <div style="width: 30%;text-align: center;">
+          <img style="border: solid 2px black;margin-top: 10px;" src="../../../assets/imgs/{{item.imagen}}" width="100px" height="100px" alt="">
+          <b>Cantidad: {{item.cantidad}}</b>
+        </div>
+        <div style="width: 60%;">
+          <div style="margin-top: 5px;margin-bottom: 5px;"><h3>{{ item.titulo }}</h3></div>
+          <div style="text-align: justify;font-size: xx-large;margin-bottom: 10px;">Precio: {{ item.precio }}</div>
+        </div>
+        <div>
+          <img src="../../../assets/imgs/ico_bas.png" style="margin: 10px;" width="30px" height="30px" alt="">
+        </div>
+      </div>
+    
+    </ion-item>
+   
+  </ion-list>
+</div>

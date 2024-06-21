@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+     <app-header></app-header>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="full-size-div">
+    <div style="background-color: black;color: white;text-align: center;padding: 10px;z-index: 0;">Bienvenido {{usuario}}</div>
+    <app-ped></app-ped>
+    <div>
+      <ion-button expand="block" (click)="comprar()">Comprar</ion-button>
+      <ion-button expand="block" (click)="anular()">Anular</ion-button>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <app-footer></app-footer>
+</ion-footer>
